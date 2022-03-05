@@ -36,11 +36,6 @@ function calculateDailyTotalValue(dailyRunningTotal) {
     dailyProductValue += dailyRunningTotal;
 }
 
-function calculateWeeklyTotal(days) {
-    //cheating and multiplying by num of days completed in the current week. E.G. 3 = Wednesday
-    weeklyTotalValue = dailyTotalValue * days;
-}
-
 while (sentinel !== "Q") {
     productNo = parseInt(prompt("Enter the product number"));
     dailyQuantitySold = parseInt(prompt(`How many of ${productNo} were sold?`));
@@ -50,8 +45,6 @@ while (sentinel !== "Q") {
 
     sentinel = prompt("Click OK to add another product or Q to quit.");
 }
-
-calculateWeeklyTotal(numOfDaysElapsed);
 
 console.log(productNo);
 console.log(dailyQuantitySold);
