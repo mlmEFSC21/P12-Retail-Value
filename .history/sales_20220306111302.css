@@ -1,0 +1,41 @@
+:root {
+    --primaryColor: #42cebb;
+    --secondaryColor: #429bce;
+    --accentColor: #42ce75;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--primaryColor);
+    font-size: 18px;
+}
+.title {
+    text-align: center;
+}
+.values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tableContainer {
+    display: table;
+}
+table,
+tr,
+th,
+td {
+    margin: 0.5rem;
+    padding: 1rem;
+}
+table {
+    background-color: var(--secondaryColor);
+}
+tr:nth-child(odd) {
+    background-color: var(--accentColor);
+}
