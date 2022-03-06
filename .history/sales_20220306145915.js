@@ -45,6 +45,7 @@ function calculateDailyTotalValue(dailyProductValue) {
 }
 
 function populateTable() {
+    let prod1 = null;
     switch (new Date().getDay()) {
         case 0:
             prod1 = document.querySelector("#sundayProd1");

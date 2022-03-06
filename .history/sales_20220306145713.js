@@ -45,6 +45,7 @@ function calculateDailyTotalValue(dailyProductValue) {
 }
 
 function populateTable() {
+    let prod1 = null;
     switch (new Date().getDay()) {
         case 0:
             prod1 = document.querySelector("#sundayProd1");
@@ -61,12 +62,12 @@ function populateTable() {
             monTotal.innerHTML = `$${dailyTotalValue.toFixed(2)}`;
             break;
         case 1:
-            prod1 = document.querySelector("#mondayProd1");
-            prod2 = document.querySelector("#mondayProd2");
-            prod3 = document.querySelector("#mondayProd3");
-            prod4 = document.querySelector("#mondayProd4");
-            prod5 = document.querySelector("#mondayProd5");
-            monTotal = document.querySelector("#monday");
+            prod1 = document.querySelector("#sundayProd1");
+            prod2 = document.querySelector("#sundayProd2");
+            prod3 = document.querySelector("#sundayProd3");
+            prod4 = document.querySelector("#sundayProd4");
+            prod5 = document.querySelector("#sundayProd5");
+            monTotal = document.querySelector("#sunday");
             prod1.innerHTML = `$${dailyProductValue[0].toFixed(2)}`;
             prod2.innerHTML = `$${dailyProductValue[1].toFixed(2)}`;
             prod3.innerHTML = `$${dailyProductValue[2].toFixed(2)}`;
@@ -75,12 +76,12 @@ function populateTable() {
             monTotal.innerHTML = `$${dailyTotalValue.toFixed(2)}`;
             break;
         case 2:
-            prod1 = document.querySelector("#tuesdayProd1");
-            prod2 = document.querySelector("#tuesdayProd2");
-            prod3 = document.querySelector("#tuesdayProd3");
-            prod4 = document.querySelector("#tuesdayProd4");
-            prod5 = document.querySelector("#tuesdayProd5");
-            monTotal = document.querySelector("#tuesday");
+            prod1 = document.querySelector("#sundayProd1");
+            prod2 = document.querySelector("#sundayProd2");
+            prod3 = document.querySelector("#sundayProd3");
+            prod4 = document.querySelector("#sundayProd4");
+            prod5 = document.querySelector("#sundayProd5");
+            monTotal = document.querySelector("#sunday");
             prod1.innerHTML = `$${dailyProductValue[0].toFixed(2)}`;
             prod2.innerHTML = `$${dailyProductValue[1].toFixed(2)}`;
             prod3.innerHTML = `$${dailyProductValue[2].toFixed(2)}`;
@@ -89,12 +90,12 @@ function populateTable() {
             monTotal.innerHTML = `$${dailyTotalValue.toFixed(2)}`;
             break;
         case 3:
-            prod1 = document.querySelector("#wednesdayProd1");
-            prod2 = document.querySelector("#wednesdayProd2");
-            prod3 = document.querySelector("#wednesdayProd3");
-            prod4 = document.querySelector("#wednesdayProd4");
-            prod5 = document.querySelector("#wednesdayProd5");
-            monTotal = document.querySelector("#wednesday");
+            prod1 = document.querySelector("#sundayProd1");
+            prod2 = document.querySelector("#sundayProd2");
+            prod3 = document.querySelector("#sundayProd3");
+            prod4 = document.querySelector("#sundayProd4");
+            prod5 = document.querySelector("#sundayProd5");
+            monTotal = document.querySelector("#sunday");
             prod1.innerHTML = `$${dailyProductValue[0].toFixed(2)}`;
             prod2.innerHTML = `$${dailyProductValue[1].toFixed(2)}`;
             prod3.innerHTML = `$${dailyProductValue[2].toFixed(2)}`;
@@ -103,12 +104,12 @@ function populateTable() {
             monTotal.innerHTML = `$${dailyTotalValue.toFixed(2)}`;
             break;
         case 4:
-            prod1 = document.querySelector("#thursdayProd1");
-            prod2 = document.querySelector("#thursdayProd2");
-            prod3 = document.querySelector("#thursdayProd3");
-            prod4 = document.querySelector("#thursdayProd4");
-            prod5 = document.querySelector("#thursdayProd5");
-            monTotal = document.querySelector("#thursday");
+            prod1 = document.querySelector("#sundayProd1");
+            prod2 = document.querySelector("#sundayProd2");
+            prod3 = document.querySelector("#sundayProd3");
+            prod4 = document.querySelector("#sundayProd4");
+            prod5 = document.querySelector("#sundayProd5");
+            monTotal = document.querySelector("#sunday");
             prod1.innerHTML = `$${dailyProductValue[0].toFixed(2)}`;
             prod2.innerHTML = `$${dailyProductValue[1].toFixed(2)}`;
             prod3.innerHTML = `$${dailyProductValue[2].toFixed(2)}`;
@@ -117,12 +118,12 @@ function populateTable() {
             monTotal.innerHTML = `$${dailyTotalValue.toFixed(2)}`;
             break;
         case 5:
-            prod1 = document.querySelector("#fridayProd1");
-            prod2 = document.querySelector("#fridayProd2");
-            prod3 = document.querySelector("#fridayProd3");
-            prod4 = document.querySelector("#fridayProd4");
-            prod5 = document.querySelector("#fridayProd5");
-            monTotal = document.querySelector("#friday");
+            prod1 = document.querySelector("#sundayProd1");
+            prod2 = document.querySelector("#sundayProd2");
+            prod3 = document.querySelector("#sundayProd3");
+            prod4 = document.querySelector("#sundayProd4");
+            prod5 = document.querySelector("#sundayProd5");
+            monTotal = document.querySelector("#sunday");
             prod1.innerHTML = `$${dailyProductValue[0].toFixed(2)}`;
             prod2.innerHTML = `$${dailyProductValue[1].toFixed(2)}`;
             prod3.innerHTML = `$${dailyProductValue[2].toFixed(2)}`;
@@ -131,12 +132,12 @@ function populateTable() {
             monTotal.innerHTML = `$${dailyTotalValue.toFixed(2)}`;
             break;
         case 6:
-            prod1 = document.querySelector("#saturdayProd1");
-            prod2 = document.querySelector("#saturdayProd2");
-            prod3 = document.querySelector("#saturdayProd3");
-            prod4 = document.querySelector("#saturdayProd4");
-            prod5 = document.querySelector("#saturdayProd5");
-            monTotal = document.querySelector("#saturday");
+            prod1 = document.querySelector("#sundayProd1");
+            prod2 = document.querySelector("#sundayProd2");
+            prod3 = document.querySelector("#sundayProd3");
+            prod4 = document.querySelector("#sundayProd4");
+            prod5 = document.querySelector("#sundayProd5");
+            monTotal = document.querySelector("#sunday");
             prod1.innerHTML = `$${dailyProductValue[0].toFixed(2)}`;
             prod2.innerHTML = `$${dailyProductValue[1].toFixed(2)}`;
             prod3.innerHTML = `$${dailyProductValue[2].toFixed(2)}`;
