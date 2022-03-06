@@ -42,7 +42,7 @@ table {
 tr:nth-child(odd) {
     background-color: var(--accentColor);
 }
-.dayOfWeek {
+thead {
     background-color: var(--secondaryColor);
 }
 th:empty {

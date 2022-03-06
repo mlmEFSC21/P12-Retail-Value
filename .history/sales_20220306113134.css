@@ -45,8 +45,3 @@ tr:nth-child(odd) {
 .dayOfWeek {
     background-color: var(--secondaryColor);
 }
-th:empty {
-    visibility: hidden;
-    background-color: var(--secondaryColor);
-    border: none;
-}

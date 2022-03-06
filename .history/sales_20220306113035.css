@@ -47,6 +47,7 @@ tr:nth-child(odd) {
 }
 th:empty {
     visibility: hidden;
+    display: hidden;
     background-color: var(--secondaryColor);
     border: none;
 }

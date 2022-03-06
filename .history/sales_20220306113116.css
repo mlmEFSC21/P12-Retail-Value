@@ -46,7 +46,7 @@ tr:nth-child(odd) {
     background-color: var(--secondaryColor);
 }
 th:empty {
-    visibility: hidden;
+    /* visibility: hidden; */
     background-color: var(--secondaryColor);
     border: none;
 }

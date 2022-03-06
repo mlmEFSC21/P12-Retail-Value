@@ -40,6 +40,11 @@ function calculateDailyTotalValue(dailyProductValue) {
     });
 }
 
+// function getDayOfWeek() {
+//     const date = new Date();
+//     let dayOfWeek = date.getDay();
+// }
+
 function populateTable() {
     switch (new Date().getDay()) {
         case 0:

@@ -40,6 +40,11 @@ function calculateDailyTotalValue(dailyProductValue) {
     });
 }
 
+// function getDayOfWeek() {
+//     const date = new Date();
+//     let dayOfWeek = date.getDay();
+// }
+
 function populateTable() {
     switch (new Date().getDay()) {
         case 0:
@@ -75,7 +80,6 @@ while (sentinel !== "Q") {
     dailyQuantitySold = parseInt(prompt(`How many of ${productNo} were sold?`));
     calculateDailyProductValue(productNo, dailyQuantitySold);
     calculateDailyTotalValue(dailyProductValue);
-    populateTable();
     sentinel = prompt("Any key to add another product or Q to quit.");
 }
 

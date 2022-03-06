@@ -40,34 +40,10 @@ function calculateDailyTotalValue(dailyProductValue) {
     });
 }
 
-function populateTable() {
-    switch (new Date().getDay()) {
-        case 0:
-            let day = "sunday";
-            let prod1 = document.querySelector("#sundayProd1");
-            let monTotal = document.querySelector("#sunday");
-            prod1.innerHTML = dailyProductValue[0];
-            monTotal.innerHTML = dailyTotalValue;
-            console.log(day);
-        case 1:
-            let day = "monday";
-            let prod1 = document.querySelector("#mondayProd1");
-        case 2:
-            let day = "tuesday";
-            let prod1 = document.querySelector("#tuesdayProd1");
-        case 3:
-            let day = "wednesday";
-            let prod1 = document.querySelector("#wednesdayProd1");
-        case 4:
-            let day = "thursday";
-            let prod1 = document.querySelector("#thursProd1");
-        case 5:
-            let day = "friday";
-            let prod1 = document.querySelector("#fridayProd1");
-        case 6:
-            let day = "saturday";
-            let prod1 = document.querySelector("#saturdayProd1");
-    }
+function getDayOfWeek {
+    const date = new Date();
+    let dayOfWeek = date.getDay();
+    console.log(dayOfWeek);
 }
 
 while (sentinel !== "Q") {
@@ -75,7 +51,6 @@ while (sentinel !== "Q") {
     dailyQuantitySold = parseInt(prompt(`How many of ${productNo} were sold?`));
     calculateDailyProductValue(productNo, dailyQuantitySold);
     calculateDailyTotalValue(dailyProductValue);
-    populateTable();
     sentinel = prompt("Any key to add another product or Q to quit.");
 }
 
