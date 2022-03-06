@@ -1,32 +1,33 @@
 let productNo = null;
 let dailyQuantitySold = 0;
-let dailyTotalValue,
-    weeklyTotalValue = 0;
 let price = 0.0;
-let dailyProductValue = [];
+let dailyProductValue = 0;
+let dailyTotalValue = 0;
+let weeklyTotalValue = 0;
+let numOfDaysElapsed = 0;
 let sentinel = null;
 
 function calculateDailyProductValue(productNo, dailyQuantitySold) {
     switch (productNo) {
         case 1:
             price = 2.98;
-            dailyProductValue[0] = price * dailyQuantitySold;
+            dailyProductValue = price * dailyQuantitySold;
             break;
         case 2:
             price = 4.5;
-            dailyProductValue[1] = price * dailyQuantitySold;
+            dailyProductValue = price * dailyQuantitySold;
             break;
         case 3:
             price = 9.98;
-            dailyProductValue[2] = price * dailyQuantitySold;
+            dailyProductValue = price * dailyQuantitySold;
             break;
         case 4:
             price = 4.49;
-            dailyProductValue[3] = price * dailyQuantitySold;
+            dailyProductValue = price * dailyQuantitySold;
             break;
         case 5:
             price = 6.87;
-            dailyProductValue[4] = price * dailyQuantitySold;
+            dailyProductValue = price * dailyQuantitySold;
             break;
         default:
             price = 0.0;
@@ -34,10 +35,8 @@ function calculateDailyProductValue(productNo, dailyQuantitySold) {
     }
 }
 
-function calculateDailyTotalValue(dailyProductValue) {
-    dailyTotalValue = dailyProductValue.reduce(function (a, b) {
-        return a + b;
-    });
+function calculateDailyTotalValue(dailyRunningTotal) {
+    dailyTotalValue += dailyRunningTotal;
 }
 
 while (sentinel !== "Q") {

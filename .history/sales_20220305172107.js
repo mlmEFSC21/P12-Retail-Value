@@ -1,32 +1,27 @@
 let productNo = null;
 let dailyQuantitySold = 0;
-let dailyTotalValue,
-    weeklyTotalValue = 0;
 let price = 0.0;
-let dailyProductValue = [];
+let dailyProductValue = 0;
+let dailyTotalValue = 0;
+let weeklyTotalValue = 0;
 let sentinel = null;
 
-function calculateDailyProductValue(productNo, dailyQuantitySold) {
-    switch (productNo) {
+function getPrice(prodPrice) {
+    switch (prodPrice) {
         case 1:
             price = 2.98;
-            dailyProductValue[0] = price * dailyQuantitySold;
             break;
         case 2:
             price = 4.5;
-            dailyProductValue[1] = price * dailyQuantitySold;
             break;
         case 3:
             price = 9.98;
-            dailyProductValue[2] = price * dailyQuantitySold;
             break;
         case 4:
             price = 4.49;
-            dailyProductValue[3] = price * dailyQuantitySold;
             break;
         case 5:
             price = 6.87;
-            dailyProductValue[4] = price * dailyQuantitySold;
             break;
         default:
             price = 0.0;
@@ -34,22 +29,33 @@ function calculateDailyProductValue(productNo, dailyQuantitySold) {
     }
 }
 
-function calculateDailyTotalValue(dailyProductValue) {
-    dailyTotalValue = dailyProductValue.reduce(function (a, b) {
-        return a + b;
-    });
+function calculateDailyProductValue(prodPrice, dailySold) {
+    dailyProductValue = prodPrice * dailySold;
+}
+
+function calculateDailyTotalValue(dailyRunningTotal) {
+    dailyProductValue += dailyRunningTotal;
+}
+
+function calculateWeeklyTotal(days) {
+    //cheating and multiplying by num of days completed in the current week. E.G. 3 = Wednesday
+    weeklyTotalValue = dailyTotalValue * days;
 }
 
 while (sentinel !== "Q") {
     productNo = parseInt(prompt("Enter the product number"));
     dailyQuantitySold = parseInt(prompt(`How many of ${productNo} were sold?`));
-    calculateDailyProductValue(productNo, dailyQuantitySold);
+    getPrice(productNo);
+    calculateDailyProductValue(price, dailyQuantitySold);
     calculateDailyTotalValue(dailyProductValue);
-    sentinel = prompt("Any key to add another product or Q to quit.");
+    sentinel = prompt("Click OK to add another product or Q to quit.");
 }
+
+calculateWeeklyTotal(numOfDaysElapsed);
 
 console.log(productNo);
 console.log(dailyQuantitySold);
+console.log(price);
 console.log(dailyProductValue);
 console.log(dailyTotalValue);
 console.log(weeklyTotalValue);

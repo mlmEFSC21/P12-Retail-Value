@@ -35,9 +35,9 @@ function calculateDailyProductValue(productNo, dailyQuantitySold) {
 }
 
 function calculateDailyTotalValue(dailyProductValue) {
-    dailyTotalValue = dailyProductValue.reduce(function (a, b) {
+    dailyTotalValue = dailyProductValue.reduce(function(a, b){
         return a + b;
-    });
+    }
 }
 
 while (sentinel !== "Q") {
